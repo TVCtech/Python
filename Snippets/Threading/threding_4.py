@@ -3,7 +3,7 @@ import time
 import random
 from queue import Queue, Empty
 
-'''thread using a timeout if queue is empty'''
+'''thread using a timeout if queue is empty n'''
 q = Queue()
 
 def putter():
@@ -20,7 +20,7 @@ def getter():
     while True:
         print("\t[Getter] Getting from queue")
         try:
-            number = q.get(False, 10)
+            number = q.get(False, 10)  # false indicates don't block
         except Empty as e:
             print("No data for 10 seconds -- I'm done")
             break
